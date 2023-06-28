@@ -11,6 +11,15 @@ body {
     font-weight: 700;
 
 }
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
 .link {
     text-decoration: none;
 }
@@ -18,14 +27,25 @@ body {
     list-style: none;
 }
 .btn {
-    padding: 10px 23px;
+    padding: 8px 20px;
     cursor: pointer;
 }
+.container {
+    width: 1270px;
+    padding: 0px 30px;
+    margin: 0 auto;
+} 
+
 /* site-header */
 .header {
     display: flex;
+    align-items: baseline;
 }
 .logo-header {
+    margin-top: 31px;
+    margin-right: 110px;
+    
+
     font-size: 30px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -38,26 +58,27 @@ body {
 }
 
 .nav-site {
-    
-
+    margin-right: 100px;
     font-size: 14px;
     font-family: Open Sans, sans-serif;
     font-weight: 600;
 }
 .nav-list {
-    display: flex;
-    gap: 30px;
+    display: flex;   
 }
-
-.nav-item {}
-
+.nav-item {
+    margin-right: 30px;
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
 .btn-list {
     display: flex;
     gap: 30px;
 }
+.btn-item {
 
-.btn-item {}
-
+}
 .btn-login {
     font-family: Open Sans, sans-serif;
     font-size: 16px;
@@ -78,10 +99,18 @@ body {
 }
 /* section banner */
 .banner {
-    
+    display: flex;
+    margin-bottom: 75px;   
+}
+.banner-card {
+     margin-top: 95px;
+     margin-bottom: 50px;
 }
 .banner-header {
-    max-width: 470px;
+   
+    margin-bottom: 50px;
+
+    width: 470px;
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
@@ -102,26 +131,53 @@ body {
     color: var(--white-color);
     background-color: var(--background-color);
 }
+.banner-img {
+    position: relative;
+    margin-top: 74px;
+}
+.banner-ellins {
+    position: absolute;
+
+    left:300px;
+    top: 136px;
+
+    transform: translateY(-50%);
+    z-index: -1;
+}
 /* section completitions */
-.competitions {}
+.competitions {
+    margin-bottom: 100px;
+}
 
 .competitions-header {
     font-size: 36px;
+    margin-bottom: 40px;
 
     color: var(--header-color);
 }
 .competitions-list {
     display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.competitions-card {}
-
+.competitions-card {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.competitions-img {
+    margin-bottom: 20px;
+}
 .competitions-subtitle {
+    margin-bottom: 5px;
+
     color: var(--primary-color);
     font-size: 20px;
 }
-
 .card-sale {
+    margin-bottom: 15px;
+
     color: var(--accent-color);
     font-size: 30px;
 }
@@ -134,14 +190,29 @@ body {
 }
 
 .card-text {
+    margin-bottom: 11px;
     font-size: 14px;
     font-family: Open Sans, sans-serif;
     color: var(--header-color);
 }
+.competetions-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding: 12px 15px;
+    border-radius: 10px 0px;
+    
+    background-color: var(--background-color);
+}
 /* section how*/
-.how {}
+.how {
+    margin-bottom: 100px;
+}
 
 .how-header {
+    margin-bottom: 60px;
+
     color: var(--header-color);
     text-align: center;
     font-size: 36px;
@@ -149,10 +220,20 @@ body {
 
 .how-list {
     display: flex;
+    justify-content: space-between;
     gap: 56px;
 }
 .how-card {
+    position: relative;
     max-width: 250px;
+}
+.how-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.how-icon {
+     margin-bottom: 30px;
 }
 .how-text {
     text-align: center;
@@ -160,10 +241,20 @@ body {
     font-family: Open Sans, sans-serif;
     color: var(--header-color);
 }
+.how-vector {
+   position: absolute; 
+   right: -50px;
+}
 /* section reviews */
 .reviews {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    background: rgba(52, 108, 217, 0.12);
     gap: 120px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .visually-hidden {
     position: absolute;
@@ -177,16 +268,26 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.rewiewe-card {
+   margin: 0 auto;
+}
 .reviews-text {
-    max-width: 400px;
+    padding-top: 78px;
+    padding-bottom: 30px;
+   
+
+    width: 400px;
     color: var(--header-color);
     text-align: center;
     font-size: 20px;
     font-family: Open Sans, sans-serif;
     font-weight: 600;
     line-height: 1.5;
+    
 }
 .reviews-subtitle {
+    padding-bottom: 40px;
+
     color: var(--header-color);
     text-align: center;
     font-size: 16px;
@@ -194,26 +295,40 @@ body {
     line-height: 30px;
     text-transform: uppercase;
 }
+.reviews-icon {
+    display: flex;
+    justify-content: center;
+}
 /* section latest */
-.latest {}
+.latest {
 
+}
 .latest-header {
+    margin-bottom: 40px;
+
     color: var(--header-color);
     font-size: 36px;
 }
 .latest-list {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;  
+}
+.latest-card {
+    margin-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.latest-img {
+    margin-bottom: 20px;
 }
 
-.latest-card {}
-
 .latest-subtitle {
+    margin-bottom: 7px;
     color: var(--primary-color);
     font-size: 20px;
 }
-
 .latest-text {
+    margin-bottom: 20px;
     color: var(--header-color);
     font-size: 14px;
     font-family: Open Sans, sans-serif;
@@ -221,10 +336,14 @@ body {
 /* footer */
 .footer {
     display: flex;
+    align-items: center;
 
     background-color: var(--background-color);
 }
 .footer-logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     color: var(--white-color);
     font-size: 30px;
     letter-spacing: 1.5px;
@@ -235,6 +354,7 @@ body {
 .footer-list {
     display: flex;
     gap: 30px;
+    margin-left: 380px;
 }
 
 .footer-item {
